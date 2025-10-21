@@ -72,5 +72,5 @@ vim.cmd.colorscheme("tokyonight")
 -- >>> Keymaps
 vim.keymap.set("n", "<leader>n", ":NvimTreeToggle<CR>", { desc = "Toggle file explorer" })
 vim.keymap.set("n", "<leader>ff", ":Telescope find_files<CR>", { desc = "Find files" })
-vim.keymap.set("n", "<leader>f", ":Telescope live_grep<CR>", { desc = "Grep text" })
+vim.keymap.set("n", "<leader>q", ":Telescope live_grep<CR>", { desc = "Grep text" })
 
