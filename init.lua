@@ -1,4 +1,5 @@
 -- >>> Basis-Settings
+vim.opt.number = true
 vim.g.mapleader = " "
 vim.o.clipboard = "unnamedplus"
 vim.o.termguicolors = true
