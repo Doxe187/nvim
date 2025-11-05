@@ -1,8 +1,16 @@
 return {
   "nvim-telescope/telescope.nvim",
-  dependencies = { "nvim-lua/plenary.nvim" },
+  dependencies = {
+    "nvim-lua/plenary.nvim",
+    {
+      "nvim-telescope/telescope-fzf-native.nvim",
+      build = "make",
+    },
+  },
   config = function()
-    require("telescope").setup({
+    local telescope = require("telescope")
+
+    telescope.setup({
       defaults = {
         mappings = {
           i = {
@@ -12,5 +20,8 @@ return {
         },
       },
     })
+
+    -- FZF-Extension laden für bessere Performance
+    telescope.load_extension("fzf")
   end,
 }

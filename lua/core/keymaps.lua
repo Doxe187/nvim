@@ -24,15 +24,34 @@ keymap.set("n", "<C-Right>", ":vertical resize +2<CR>", { desc = "Breite erhöhe
 -- Buffer-Navigation
 keymap.set("n", "<Tab>", ":bnext<CR>", { desc = "Nächster Buffer" })
 keymap.set("n", "<S-Tab>", ":bprevious<CR>", { desc = "Vorheriger Buffer" })
+keymap.set("n", "<leader>bd", ":bdelete<CR>", { desc = "Buffer schließen" })
+keymap.set("n", "<leader>bD", ":bdelete!<CR>", { desc = "Buffer erzwungen schließen" })
 
 -- Besseres Einfügen
 keymap.set("v", "p", '"_dP', { desc = "Paste ohne zu überschreiben" })
 
+-- Text verschieben (Visual Mode)
+keymap.set("v", "J", ":m '>+1<CR>gv=gv", { desc = "Zeilen nach unten verschieben" })
+keymap.set("v", "K", ":m '<-2<CR>gv=gv", { desc = "Zeilen nach oben verschieben" })
+
+-- Besseres Indenting
+keymap.set("v", "<", "<gv", { desc = "Einrücken nach links" })
+keymap.set("v", ">", ">gv", { desc = "Einrücken nach rechts" })
+
+-- Zentrierte Navigation
+keymap.set("n", "<C-d>", "<C-d>zz", { desc = "Halbe Seite runter (zentriert)" })
+keymap.set("n", "<C-u>", "<C-u>zz", { desc = "Halbe Seite hoch (zentriert)" })
+keymap.set("n", "n", "nzzzv", { desc = "Nächste Suche (zentriert)" })
+keymap.set("n", "N", "Nzzzv", { desc = "Vorherige Suche (zentriert)" })
+
 -- Nvim-Tree
 keymap.set("n", "<leader>n", ":NvimTreeToggle<CR>", { desc = "Toggle file explorer" })
+keymap.set("n", "<leader>e", ":NvimTreeFocus<CR>", { desc = "Focus file explorer" })
 
 -- Telescope
 keymap.set("n", "<leader>ff", ":Telescope find_files<CR>", { desc = "Find files" })
 keymap.set("n", "<leader>fg", ":Telescope live_grep<CR>", { desc = "Grep text" })
 keymap.set("n", "<leader>fb", ":Telescope buffers<CR>", { desc = "Find buffers" })
-keymap.set("n", "<leader>fh", ":Telescope help_tags<CR>", { desc = "Help tags" })
+keymap.set("n", "<leader>fh", ":Telescope help_tags<CR>", { desc = "Find help" })
+keymap.set("n", "<leader>fr", ":Telescope oldfiles<CR>", { desc = "Recent files" })
+keymap.set("n", "<leader>fc", ":Telescope grep_string<CR>", { desc = "Find string under cursor" })
