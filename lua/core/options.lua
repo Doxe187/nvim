@@ -32,6 +32,6 @@ opt.swapfile = false
 opt.splitright = true
 opt.splitbelow = true
 
--- netrw deaktivieren (wichtig für neo-tree)
+-- netrw deaktivieren (wichtig für nvim-tree)
 g.loaded_netrw = 1
 g.loaded_netrwPlugin = 1
