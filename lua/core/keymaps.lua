@@ -44,9 +44,9 @@ keymap.set("n", "<C-u>", "<C-u>zz", { desc = "Halbe Seite hoch (zentriert)" })
 keymap.set("n", "n", "nzzzv", { desc = "Nächste Suche (zentriert)" })
 keymap.set("n", "N", "Nzzzv", { desc = "Vorherige Suche (zentriert)" })
 
--- Nvim-Tree
-keymap.set("n", "<leader>n", ":NvimTreeToggle<CR>", { desc = "Toggle file explorer" })
-keymap.set("n", "<leader>e", ":NvimTreeFocus<CR>", { desc = "Focus file explorer" })
+-- Neo-tree
+keymap.set("n", "<leader>n", ":Neotree toggle<CR>", { desc = "Toggle file explorer" })
+keymap.set("n", "<leader>e", ":Neotree focus<CR>", { desc = "Focus file explorer" })
 
 -- Telescope
 keymap.set("n", "<leader>ff", ":Telescope find_files<CR>", { desc = "Find files" })
