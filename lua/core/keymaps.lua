@@ -5,7 +5,6 @@ vim.g.maplocalleader = " "
 local keymap = vim.keymap
 
 -- Allgemeine Keymaps
-keymap.set("i", "jk", "<ESC>", { desc = "Escape mit jk" })
 keymap.set("n", "<leader>w", ":w<CR>", { desc = "Speichern" })
 keymap.set("n", "<leader>q", ":q<CR>", { desc = "Schließen" })
 
@@ -24,8 +23,7 @@ keymap.set("n", "<C-Right>", ":vertical resize +2<CR>", { desc = "Breite erhöhe
 -- Buffer-Navigation
 keymap.set("n", "<Tab>", ":bnext<CR>", { desc = "Nächster Buffer" })
 keymap.set("n", "<S-Tab>", ":bprevious<CR>", { desc = "Vorheriger Buffer" })
-keymap.set("n", "<leader>bd", ":bdelete<CR>", { desc = "Buffer schließen" })
-keymap.set("n", "<leader>bD", ":bdelete!<CR>", { desc = "Buffer erzwungen schließen" })
+keymap.set("n", "<C-w>", ":bdelete<CR>", { desc = "Buffer schließen" })
 
 -- Besseres Einfügen
 keymap.set("v", "p", '"_dP', { desc = "Paste ohne zu überschreiben" })
