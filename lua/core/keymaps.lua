@@ -48,8 +48,7 @@ keymap.set("n", "<leader>e", ":NvimTreeFocus<CR>", { desc = "Focus file explorer
 
 -- Telescope
 keymap.set("n", "<leader>ff", ":Telescope find_files<CR>", { desc = "Find files" })
-keymap.set("n", "<leader>fg", ":Telescope live_grep<CR>", { desc = "Grep text" })
-keymap.set("n", "<leader>fb", ":Telescope buffers<CR>", { desc = "Find buffers" })
+keymap.set("n", "<leader><leader>", ":Telescope live_grep<CR>", { desc = "Grep text" })
 keymap.set("n", "<leader>fh", ":Telescope help_tags<CR>", { desc = "Find help" })
 keymap.set("n", "<leader>fr", ":Telescope oldfiles<CR>", { desc = "Recent files" })
 keymap.set("n", "<leader>fc", ":Telescope grep_string<CR>", { desc = "Find string under cursor" })
