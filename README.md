@@ -14,13 +14,11 @@ My configurations are heavily documented to make them as clear as possible. Whil
 
 ## Table of Contents
 
-- [Installation and Setup](#installation-and-setup)
 - [Architecture](#architecture)
 - [Features](#features)
 - [Keybindings](#keybindings)
 - [Plugin Management](#plugin-management)
 - [Customization](#customization)
-- [Troubleshooting](#troubleshooting)
 
 ## Installation and Setup
 
@@ -32,36 +30,9 @@ My configurations are heavily documented to make them as clear as possible. Whil
 - A **Nerd Font** (recommended: JetBrains Mono Nerd Font)
 - **ripgrep** (for Telescope live grep)
 - **fd** (optional, for faster file finding)
-- **lazygit** (optional, for git integration)
 
-### Quick Install
-
-```bash
-# Backup existing config (if any)
-mv ~/.config/nvim ~/.config/nvim.backup
-
-# Clone this repository
-git clone https://github.com/YOUR_USERNAME/nvim-config.git ~/.config/nvim
-
-# Start Neovim - lazy.nvim will automatically install plugins
-nvim
-```
-
-On first launch, lazy.nvim will automatically:
-1. Bootstrap itself
-2. Install all configured plugins
-3. Set up language servers via Mason
 
 ### Platform-Specific Notes
-
-**Windows (PowerShell):**
-```powershell
-# Backup existing config
-Move-Item $env:LOCALAPPDATA\nvim $env:LOCALAPPDATA\nvim.backup
-
-# Clone this repository
-git clone https://github.com/YOUR_USERNAME/nvim-config.git $env:LOCALAPPDATA\nvim
-```
 
 **macOS:**
 ```bash
@@ -323,51 +294,6 @@ return {
 }
 ```
 
-## Troubleshooting
-
-### Check Health
-
-Neovim includes a built-in health checker:
-
-```vim
-:checkhealth
-```
-
-This will diagnose common issues with plugins, LSP, and dependencies.
-
-### Reload Configuration
-
-After making changes:
-
-```vim
-:source $MYVIMRC
-```
-
-Or restart Neovim.
-
-### Common Issues
-
-**Plugins not loading:**
-```vim
-:Lazy sync
-```
-
-**LSP not working:**
-```vim
-:LspInfo          " Check if LSP is attached
-:Mason            " Verify server is installed
-```
-
-**Treesitter highlighting broken:**
-```vim
-:TSUpdate         " Update parsers
-:TSInstall <language>  " Install specific parser
-```
-
-**Telescope not finding files:**
-- Install `ripgrep` and `fd` via your package manager
-- Check that you're in a valid project directory
-
 ### Clean Install
 
 If something goes wrong:
@@ -386,44 +312,12 @@ mv ~/.config/nvim.backup ~/.config/nvim
 nvim
 ```
 
-## Testing Configuration
-
-### Headless Test
-
-Test if configuration loads without errors:
-
-```bash
-nvim --headless -c "lua print('Config loaded successfully')" -c "qall"
-```
-
-### Startup Time
-
-Check startup performance:
-
-```bash
-nvim --startuptime startup.log
-```
-
-## Screenshots
-
-> *Add screenshots of your configuration here!*
-
-- File explorer with nvim-tree
-- Telescope fuzzy finding
-- LSP autocompletion
-- Git integration with gitsigns
-- Terminal with toggleterm
-
 ## Contributing
 
 This is a personal configuration, but feel free to:
 - Open issues for bugs or questions
 - Submit PRs for improvements
 - Fork and adapt to your needs
-
-## License
-
-This configuration is available under the MIT License. See `LICENSE` file for details.
 
 ## Further Reading
 
