@@ -1,9 +1,9 @@
 return {
-  "embark-theme/vim",
-  name = "embark",
+  "folke/tokyonight.nvim",
+  name = "tokyonight",
   lazy = false,
   priority = 1000,
   config = function()
-    vim.cmd.colorscheme("embark")
+    vim.cmd.colorscheme("tokyonight")
   end,
 }
