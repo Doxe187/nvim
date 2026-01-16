@@ -44,6 +44,7 @@ keymap.set("n", "N", "Nzzzv", { desc = "Vorherige Suche (zentriert)" })
 -- Nvim-Tree
 keymap.set("n", "<leader>n", ":NvimTreeToggle<CR>", { desc = "Toggle file explorer" })
 keymap.set("n", "<leader>e", ":NvimTreeFocus<CR>", { desc = "Focus file explorer" })
+keymap.set("n", "<leader>v", ":vsplit<CR>", { desc = "Split Window vertical"})
 
 -- Telescope
 keymap.set("n", "<leader>ff", ":Telescope find_files<CR>", { desc = "Find files" })
