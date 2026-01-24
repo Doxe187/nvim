@@ -3,7 +3,7 @@ return {
   build = ":TSUpdate",
   lazy = false,
   config = function()
-    require("nvim-treesitter.configs").setup({
+    require("nvim-treesitter").setup({
       ensure_installed = {
         "lua", "vim", "vimdoc",
         "python", "javascript", "typescript", "tsx",
@@ -13,17 +13,13 @@ return {
         "markdown", "markdown_inline",
         "regex", "comment"
       },
-      auto_install = true,
-      highlight = {
-        enable = true,
-        additional_vim_regex_highlighting = false,
-      },
-      indent = {
-        enable = true,
-      },
-      sync_install = false,
-      ignore_install = {},
-      modules = {},
+    })
+
+    -- Enable treesitter-based highlighting (built into Neovim 0.10+)
+    vim.api.nvim_create_autocmd("FileType", {
+      callback = function()
+        pcall(vim.treesitter.start)
+      end,
     })
   end,
 }
