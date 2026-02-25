@@ -25,5 +25,16 @@ return {
       ignore_install = {},
       modules = {},
     })
+
+    -- Eigener Autocmd: Treesitter direkt per BufEnter/BufReadPost starten
+    vim.api.nvim_create_autocmd({ "BufReadPost", "BufNewFile", "BufEnter" }, {
+      callback = function(args)
+        local buf = args.buf
+        local ft = vim.bo[buf].filetype
+        if ft ~= "" and ft ~= "NvimTree" then
+          pcall(vim.treesitter.start, buf)
+        end
+      end,
+    })
   end,
 }
