@@ -9,7 +9,12 @@ return {
       -- "nvim-mini/mini.icons",
       -- "nvim-tree/nvim-web-devicons"
     },
-    opts = {}, -- hier kannst du Optionen anpassen
+    opts = {
+      -- LaTeX Support deaktivieren (Parser/Tools nicht installiert)
+      latex = {
+        enabled = false,
+      },
+    },
   },
 }
 

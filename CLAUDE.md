@@ -27,7 +27,7 @@ Each plugin is defined in its own file under `lua/plugins/` as a Lua table that 
 - telescope.nvim - Fuzzy finder (find files: `<leader>ff`, grep: `<leader>fg`)
 - nvim-treesitter - Syntax highlighting (auto-installs parsers for: lua, vim, vimdoc, python, javascript, typescript)
 - lualine.nvim - Statusline
-- tokyonight.nvim - Colorscheme
+- nightfox.nvim - Colorscheme
 
 **Keybinding Conventions:**
 - `<leader>` prefix for main commands (file save, quit, telescope, nvim-tree)
