@@ -3,14 +3,13 @@ return {
   event = "VeryLazy",
   dependencies = { "nvim-tree/nvim-web-devicons" },
   config = function()
-    local colors = require("tokyonight.colors").setup()
     local devicons = require("nvim-web-devicons")
 
     require("incline").setup({
       highlight = {
         groups = {
-          InclineNormal = { guibg = colors.bg_dark, guifg = colors.fg },
-          InclineNormalNC = { guibg = colors.bg_dark, guifg = colors.fg_dark },
+          InclineNormal = { default = true, group = "StatusLine" },
+          InclineNormalNC = { default = true, group = "StatusLineNC" },
         },
       },
       window = {
